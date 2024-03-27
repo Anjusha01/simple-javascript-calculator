@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        first number: <input type="number" id="firstNum">
+        <br>
+        second number: <input type="number" id="secondNum">
+        <br>
+        <button onclick="cal('add')">Addition</button>
+        <button onclick="cal('sub')">Subtraction</button>
+        <button onclick="cal('div')">Division</button>
+        <button onclick="cal('mul')">Multiplication</button>
+        <br>
+        Result <input id="res">
+
+        <script>
+            function cal(x){
+            let result;
+            let num1=parseFloat(document.getElementById('firstNum').value);
+            let num2=parseFloat(document.getElementById('secondNum').value);
+            switch(x){
+            case 'mul': result=num1*num2;
+                    break;
+            case 'div': result=num1/num2;
+                    break;
+            case 'sum': result=num1+num2;
+                    break;
+            case 'sub': result=num1-num2;
+                    break;
+        }
+        document.getElementById('res').innerHTML=result;
+        }
+        </script>
+</body>
+</html>
